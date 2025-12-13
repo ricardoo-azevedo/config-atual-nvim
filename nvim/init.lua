@@ -8,13 +8,6 @@ vim.o.swapfile = false
 vim.o.backup = false
 vim.o.writebackup = false
 
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "netrw",
-  callback = function()
-    vim.keymap.set("n", "l", "<Plug>NetrwLocalBrowseCheck", { buffer = true, silent = true })
-  end,
-})
-
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes"
@@ -43,8 +36,9 @@ vim.keymap.set("n", "<A-l>", "<C-w>l", { noremap = true, silent = true })
 vim.keymap.set("n", "<A-j>", "<C-w>j", { noremap = true, silent = true })
 vim.keymap.set("n", "<A-k>", "<C-w>k", { noremap = true, silent = true })
 
-vim.keymap.set("n", "<leader>e", ":Ex<CR>")
+-- vim.keymap.set("n", "<leader>e", ":Ex<CR>")
 
+-- vim.keymap.set("n", "<leader>e", ":Neotree reveal<CR>", { silent = true })
 vim.opt.clipboard = "unnamedplus"
 vim.keymap.set("n", "x", '"_x')
 vim.keymap.set("n", "d", '"_d')

@@ -1,36 +1,54 @@
 return {
-	{
-		"nvim-java/nvim-java",
-		ft = { "java" },
-		config = function()
-    local lombok_path = jdtls_path .. '/lombok.jar'
-			require("jdtls").setup({
+  'nvim-java/nvim-java',
+  config = function()
+    require('java').setup({
+      -- Startup checks
+      checks = {
+        nvim_version = true,
+        nvim_jdtls_conflict = true,
+      },
 
-				vim.fn.expand("~/.sdkman/candidates/java/21.*-tem/bin/java"), 
+      -- JDTLS configuration
+      jdtls = {
+        version = '1.43.0',
+      },
 
-				"-Declipse.application=org.eclipse.jdt.ls.core.id1",
-				"-Dosgi.bundles.defaultStartLevel=4",
-				"-Declipse.product=org.eclipse.jdt.ls.core.product",
-				"-Dlog.protocol=true",
-				"-Dlog.level=ALL",
-				"-Xmx1g",
-				"--add-modules=ALL-SYSTEM",
-				"--add-opens",
-				"java.base/java.util=ALL-UNNAMED",
-				"--add-opens",
-				"java.base/java.lang=ALL-UNNAMED",
+      -- Extensions
+      lombok = {
+        enable = true,
+        version = '1.18.40',
+      },
 
-				"-javaagent:" .. lombok_path,
+      java_test = {
+        enable = true,
+        version = '0.40.1',
+      },
 
-				"-jar",
-				equinox_launcher_path,
+      java_debug_adapter = {
+        enable = true,
+        version = '0.58.2',
+      },
 
-				"-configuration",
-				config_path,
+      spring_boot_tools = {
+        enable = true,
+        version = '1.55.1',
+      },
 
-				"-data",
-				vim.fn.stdpath("cache") .. "/jdtls/" .. vim.fn.fnamemodify(vim.fn.getcwd(), ":t"),
-			})
-		end,
-	},
+      -- JDK installation
+      jdk = {
+        auto_install = true,
+        version = '17',
+      },
+
+      -- Logging
+      log = {
+        use_console = true,
+        use_file = true,
+        level = 'info',
+        log_file = vim.fn.stdpath('state') .. '/nvim-java.log',
+        max_lines = 1000,
+        show_location = false,
+      },
+    })
+  end,
 }
