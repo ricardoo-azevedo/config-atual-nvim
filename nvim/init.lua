@@ -36,6 +36,7 @@ vim.keymap.set("n", "<A-l>", "<C-w>l", { noremap = true, silent = true })
 vim.keymap.set("n", "<A-j>", "<C-w>j", { noremap = true, silent = true })
 vim.keymap.set("n", "<A-k>", "<C-w>k", { noremap = true, silent = true })
 
+
 -- vim.keymap.set("n", "<leader>e", ":Ex<CR>")
 
 -- vim.keymap.set("n", "<leader>e", ":Neotree reveal<CR>", { silent = true })
@@ -45,7 +46,8 @@ vim.keymap.set("n", "d", '"_d')
 vim.keymap.set("v", "d", '"_d')
 
 
-vim.cmd("colorscheme venom")
+vim.cmd("colorscheme silverhand")
+-- vim.cmd.colorscheme("darkearth")
 
 vim.opt.wrap = true
 vim.opt.linebreak = true

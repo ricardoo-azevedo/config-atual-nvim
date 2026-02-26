@@ -1,12 +1,18 @@
+-- return {
+--   "metalelf0/black-metal-theme-neovim",
+--   lazy = false,
+--   priority = 1000,
+--   config = function()
+--     require("black-metal").setup({
+--       -- optional configuration here
+--     })
+--     require("black-metal").load()
+--   end,
+-- }
 return {
-  "metalelf0/black-metal-theme-neovim",
-  lazy = false,
-  priority = 1000,
-  config = function()
-    require("black-metal").setup({
-      -- optional configuration here
-    })
-    require("black-metal").load()
-  end,
+  'thedenisnikulin/vim-cyberpunk'
 }
-
+-- return {
+--     "ptdewey/darkearth-nvim",
+--     priority = 1000,
+-- }
