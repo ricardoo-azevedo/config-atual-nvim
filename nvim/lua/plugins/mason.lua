@@ -18,6 +18,7 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
+			-- 🔥 ADIÇÃO 1: capabilities do nvim-cmp
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			vim.lsp.config("lua_ls", {
@@ -41,10 +42,14 @@ return {
 			vim.lsp.config("ast_grep", {
 				capabilities = capabilities,
 			})
-			vim.lsp.config("tsserver", {
+			vim.lsp.config("ts_ls", {
 				capabilities = capabilities,
 			})
+      vim.lsp.config("xml", {
+        capabilities = capabilities,
+      })
 
+			-- keymaps continuam iguais
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "[C]ode [A]ctions" })

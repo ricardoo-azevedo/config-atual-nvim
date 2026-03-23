@@ -11,7 +11,7 @@ vim.o.writebackup = false
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes"
-
+vim.opt.statuscolumn = " %l%=%s"
 vim.opt.fillchars = "eob: "
 
 local hover = function()
@@ -46,27 +46,28 @@ vim.keymap.set("n", "d", '"_d')
 vim.keymap.set("v", "d", '"_d')
 
 
-vim.cmd("colorscheme silverhand")
+-- vim.cmd("colorscheme silverhand")
 -- vim.cmd.colorscheme("darkearth")
+vim.cmd.colorscheme("oasis-night")
 
 vim.opt.wrap = true
 vim.opt.linebreak = true
 vim.opt.breakindent = true
 
-vim.cmd([[
-hi Normal guibg=NONE ctermbg=NONE
-hi NormalNC guibg=NONE ctermbg=NONE
-hi EndOfBuffer guibg=NONE ctermbg=NONE
-hi SignColumn guibg=NONE ctermbg=NONE
-hi VertSplit guibg=NONE ctermbg=NONE
-hi StatusLine guibg=NONE ctermbg=NONE
-hi StatusLineNC guibg=NONE ctermbg=NONE
-hi MsgArea guibg=NONE ctermbg=NONE
-hi TelescopeNormal guibg=NONE ctermbg=NONE
-hi FloatBorder guibg=NONE ctermbg=NONE
-hi NormalFloat guibg=NONE ctermbg=NONE
-hi Pmenu guibg=NONE ctermbg=NONE
-hi PmenuSel guibg=NONE ctermbg=NONE
-hi WinSeparator guibg=NONE ctermbg=NONE
-hi TermFloat guibg=NONE ctermbg=NONE
-]])
+-- vim.cmd([[
+-- hi Normal guibg=NONE ctermbg=NONE
+-- hi NormalNC guibg=NONE ctermbg=NONE
+-- hi EndOfBuffer guibg=NONE ctermbg=NONE
+-- hi SignColumn guibg=NONE ctermbg=NONE
+-- hi VertSplit guibg=NONE ctermbg=NONE
+-- hi StatusLine guibg=NONE ctermbg=NONE
+-- hi StatusLineNC guibg=NONE ctermbg=NONE
+-- hi MsgArea guibg=NONE ctermbg=NONE
+-- hi TelescopeNormal guibg=NONE ctermbg=NONE
+-- hi FloatBorder guibg=NONE ctermbg=NONE
+-- hi NormalFloat guibg=NONE ctermbg=NONE
+-- hi Pmenu guibg=NONE ctermbg=NONE
+-- hi PmenuSel guibg=NONE ctermbg=NONE
+-- hi WinSeparator guibg=NONE ctermbg=NONE
+-- hi TermFloat guibg=NONE ctermbg=NONE
+-- ]])
